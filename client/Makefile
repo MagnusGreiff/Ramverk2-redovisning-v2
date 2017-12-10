@@ -125,7 +125,7 @@ check: check-tools-js #check-tools-bash check-tools-php
 .PHONY: test
 test: stylelint eslint jsunittest #csslint
 	@$(call HELPTEXT,$@)
-	[ ! -f composer.json ] || composer validate
+	[ ! -f composer.json ] || composer validate
 
 
 
@@ -155,7 +155,7 @@ install: prepare install-tools-js #install-tools-php install-tools-bash
 update:
 	@$(call HELPTEXT,$@)
 	[ ! -d .git ] || git pull
-	[ ! -f composer.json ] || composer update
+	[ ! -f composer.json ] || composer update
 	[ ! -f package.json ] || npm update
 
 
