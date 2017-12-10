@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Report | Me-sida</title>
+    <link rel="stylesheet" href="../less/style.less" />
+</head>
+
+<body>
+    <nav class="navbar">
+        <img class="mungeimg" src="../images/munge.png" />
+        <ul>
+            <li><a href="index.html">Start</a></li>
+            <li><a href="about.html">Om</a></li>
+            <li><a href="report.html">Redovisningar</a></li>
+            <li><a href="chat.html">Chat</a></li>
+            <li><a href="app.html">App</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h1>Redovisning | Me-sida</h1>
+        <div class="reports">
+            <div class="kmom">
+                <h3>Kmom01</h3>
+                <h5>Berätta utförligt om din syn på Express och Pug och hur de samverkar. Relatera till andra ramverk du jobbat med. Lyft fram de fördelar och eventuellt nackdelar du finner, eller bara notera skillnader och likheter.</h5>
+                <p>Jag tycker om Express dels för att det är Javascript och dels för att man snabbt kan komma igång och arbeta. Jag har inte använd Express tidigare men jag kan se fördelarna med det. Om man vill göra ett eget REST API så är det väldigt enkelt
+                    att göra i Express. Man skriver sina routes och skriver ut något så är man klar. Pug är något nytt och jag har inte använt det innan. Jag tycker dock inte om Pug. Jag testade att använda det när jag gjorde övningen men det fastande
+                    inte för mig. Jag tycker inte om sätter hur man skriver html:en. Det var just därför jag valde att använda mig av React som frontend istället. Jag har inte jobbat i många olika ramverk innan men ett jag har jobbat i är Anax. Den stora
+                    skillnaden mellan Express och Anax som jag har märkt är hur man sätter upp saker. I anax måste man konfigurera de moduler man vill använda sig av i t. ex di.php samt lägga till routes m.m. men i Express så ligger de i node_modules
+                    och man kan bara göra import för att få tag på dem. </p>
+                <h5>Berätta om din katalogstruktur och hur du organiserade din kod, hur tänkte du?</h5>
+                <p>Jag har valt att lägga alla mina vyer (.jsx filer) i en egen mapp(views). Alla mina routes (bara 1 just nu) finns i mappen routes. Allt statiskt hamnar i mappen public såsom stylesheet och bilder. Jag har en css mapp som ligger i root
+                    och den finns där för att jag använder less och den behövde ligga där. Huvudfilen heter app.js och ligger i root. </p>
+                <h5>Använde du någon form av scaffolding som Express erbjuder? </h5>
+                <p>När jag skapade filerna som finns i me/Redovisa så använde jag inte scaffolding. När jag testade att använda express i me/kmom01 så använde jag scaffolding. Det var mest för att testa hur det fungerade. Det var inte det enklaste att lära
+                    sig. Kommandot tycker jag inte är särskilt bra och dokumentationen var inte heller bra. </p>
+                <h5>Jobbar du med Markdown för innehållet, eller annat liknande? </h5>
+                <p>Nej, det gjort jag inte. Jag valde att skriva vanlig html i mina React filer(jsx). Av någon anledning tycker jag inte direkt om markdown. Det känns som om det begränsar det jag vill göra när jag skriver text och vill styla det jag har
+                    skrivit. </p>
+            </div>
+            <div class="kmom">
+                <h3>Kmom02</h3>
+                <h5>Har du jobbat med Docker eller andra virtualiseringstekniker innan?</h5>
+                <p>Nej, det har jag inte gjort. Det tror jag inte iallafall, eller om man räknar Virtualbox som det så har jag gjort det. Det ska bli roligt att få lära sig mer om Docker. Nu när jag har lärt mig att jobba med Docker valde jag att byta ut
+                    XAMPP mot en docker container som kör PHP Apache. Dels för att jag ville leka rundor med Docker och dels för att jag nu kan testa min kod i olika version av PHP.</p>
+                <h5>Hur ser du på möjligheterna att använda dig av Docker för att jobba med tester av ditt repo?</h5>
+                <p>Att man kan testa flera olika versioner av ett verktyg (node, PHP etc) är viktigt och med Docker kan man göra det på ett simpelt sätt. För att effektivisera mina användning av Docker valde jag att lägga till några Alias i min bash_profile
+                    som sköter några olika Dockerkommandon som docker-compose up och docker-compose down m.m. Detta gör att det går snabbare för mig att testa min kod samt behöver jag inte komma ihåg alla kommandon som Docker har utan istället komma ihåg
+                    mina Aliases.</p>
+                <h5>Gick allt smidigt eller stötte du på problem?</h5>
+                <p>När jag skulle fixa docker för PHP gick det smidigt. Jag följde övningen och det gick bra, övningen gick igenom allt som jag behövde för att starta upp mina egna Docker kontainrar. När jag skulle fixa docker för node blev det lite problematiskt.
+                    Jag visste inte hur jag skulle få det att fungera. Efter lite googling kom jag till någon Github som visade exakt hur man gjorde för att få Docker att fungera med node. </p>
+                <h5>Skapade du din egen image, berätta om den?</h5>
+                <p>Nej, det gjorde jag inte. Jag valde att vänta till nästa kursmoment då vi kommer gå igenom hur man gör. Det ser inte så svårt ut att göra egna images men som sagt så väntar jag.</p>
+            </div>
+            <div class="kmom">
+                <h3>Kmom03</h3>
+                <h5>Berätta vilka tekniker/verktyg du valde för enhetstester och kodtäckning och varför?</h5>
+                <p>Jag valde att använda mig av Scrutinizer för kodtäckning. Jag valde Scrutinizer för att när jag försökte implementera Coveralls och Codecov fungerade det inte. Jag försökte många timmar med att få de att fungera men de vill inte. Scrutinizer
+                    hade jag också använt tidigare så det var inga problem att fixa. För enhetstester valde jag att använda mig av Mocha. Vi gick igenom det i övningen och jag fastnade på hur man skrev dem. Strukturen ser väldigt annorlunda ut från vad
+                    jag har sätt tidigare och jag tycker verkligen om strukturen. Just nu finns det knappt några enhetstester för att jag inte ha så mycket kod att testa. </p>
+                <h5>Berätta om cin CI-kedja och reflektera över de valen du gjorde?</h5>
+                <p>Jag använder mig av Travis som byggverktyg det är för att jag har använt det tidigare och jag tycker om hur det är strukturerat. I config filen kör jag `make install` samt `make test`. För kodtäckning och kodkvalitet använde jag mig av
+                    Scrutinizer samt Codeclimate. Det är av samma anledning som jag valde dessa. Det är för att jag har använt dem innan och vet hur det fungerar. Som jag sade i förra frågan så fick jag inte Coveralls och Codecov att fungera så det var
+                    också en av anledningarna. </p>
+
+                <h5>Reflektera över hur det gick att integrera enhetstesterna i olika Docker-kontainerns och om du ser någon nytta med detta.</h5>
+                <p>Det var lite problematiskt att fixa detta. Jag satt många timmar med att få rätt på detta. Men tillslut fick jag rätt på det. Det är kanske inte den optimala lösningen men det fungerar så jag låter det vara för tillfället. När Docker-kontainern
+                    startar så kör den `make clean-all` för att radera alla node_modules som kommer till kontainern, `make setup-tools-js` för att installera alla valideringsverktyg m.m, `make check-tools-js` för att se så allt blir installerat och `make
+                    install` för att installera alla dependencies. Jag tycker om att testa i docker-kontainrar. Mest för att man får möjligheten att testa kod mot flera olika versioner av node.
+                </p>
+                <h5>Hur väl lyckades du utvärdera TDD-konceptet och vilka är dina reflektioner?</h5>
+                <p>
+                    TDD fastnade inte hos mig. Att man ska först skriva testerna och sedan koden. Hos mig går det inte ihop. Jag vill skriva koden först och sedan i slutet skriva testerna. Kanske kommer jag att ändra mig i framtiden men just nu så kommer jag nog skriva koden
+                    först och sedan testerna. Det är så jag alltid har gjort.
+                </p>
+                <h5>Berätta om tankarna kring din klient/server applikation och nämn de tekniker du använder. </h5>
+                <p>
+                    Jag ska göra en chatt där jag kommer att integrera flera olika API:er (förhoppningsvis). Det första API:et jag kommer att integrera är StackOverflows API. Jag har tänkt lite på hur det ska fungera och jag kom fram till att man kan t.ex. skriva [post]111[/post]
+                    för att länka till en post på StackOverflow. Just den där biten med [post] kommer att bytas ut mot en länk till post:en samt byta namn till vad post:en heter. Jag valde att strukturera min kod i 2 olika mappar. En för servern och en
+                    för klienten. Servern kör Express och klienten kör Electron. Tillbaka till appen: Förhoppningsvis ska man också kunna logga in (vet inte om detta kommer vara ett krav) och skapa egen profil. Jag tänkte använda StackOverflows inloggnings
+                    API, men jag vet inte hur det ska fixas (får tänka på det). Annars får jag skriva min egen variant.
+                </p>
+                <h5>Tillägg: </h5>
+                <p>
+                    Eftersom jag utvecklar en Electronapp så fungerar det inte att köra den via docker då det är en desktopapplikation. Därför har jag inte gjort delar av krav 6 i uppgift 2. PS: `make test3` kommer att misslyckas. Den versionen stöds inte.
+                </p>
+            </div>
+            <div class="kmom">
+                <h3>Kmom04</h3>
+                <h5>Är du ny på realtidsprogrammering eller har du gjort liknande tidigare?</h5>
+                <p>Jag är helt ny med realtidsprogrammering. Jag har inte gjort något sånt här tidigare eller jag tror att jag inte har gjort det innan. Det kan kanske ha hänt i någon annan kurs att det har smugit in lite realtidsprogrammering. Men jag tror
+                    inte det så det är helt nytt. Det ska bli roligt att få lära sig mer om det här med realtidsprogrammering.</p>
+                <h5>Hur gick det att jobba med konceptet realtidsprogrammering i webben, några reflektioner?</h5>
+                <p>Det gick bra. Det uppstod inga problem när jag testade hur det fungerade. Jag har inte jättemycket att säga om realtidsprogrammering då jag fortfarande är nybörjare med det men jag tycker att det är intressant och vill utforska det mer.
+                    </p>
+                <h5>Berätta om din chatt som du integrerade i redovisa-sidan.</h5>
+                <p>Det var ganska enkelt att integrera chatten i redovisa-sidan. Övningen visade hur man fick igång en egen chatt och den hade jag stor nytta av. Jag började faktiskt att integrera chatten i mitt projekt så det var enkelt att sedan överföra
+                    den kod jag fick från projektet in till redovisa-sidan. Även om redovisa-sidan är React och mitt projekt är en electron-app så var det enkelt att integrera.</p>
+                <h5>Berätta om den realtidsfunktionalitet du väljer att integrera i din klient/server applikation.</h5>
+                <p>Mitt projekt kommer att vara en chatt som jag sedan kopplar olika api:er. Realtidsfunktionaliteten är då chatten. När man startar electron-appen får man välja vilken IP man ska ansluta till och sedan kan man börja chatta med andra. Jag
+                    vet dock inte om min chatt kommer att fungera med andra servrar än den jag själv bygger.</p>
+            </div>
+            <div class="kmom">
+                <h3>Kmom05</h3>
+                <p></p>
+            </div>
+            <div class="kmom">
+                <h3>Kmom06</h3>
+                <p></p>
+            </div>
+            <div class="kmom">
+                <h3>Kmom07/10</h3>
+                <p></p>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footerItems">
+            <p class="copyRight">&copy;Magnus Greiff</p>
+            <p class="repoGithub">Github repo: <a href="https://www.github.com/MagnusGreiff/Ramverk2-Redovisning">Github</a></p>
+        </div>
+    </footer>
+
+    <!-- <script>
+        // You can also require other files to run in this process
+        require('./renderer.js')
+    </script> -->
+</body>
+
+</html>

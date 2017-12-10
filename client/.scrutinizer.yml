@@ -1,0 +1,13 @@
+checks:
+    javascript: true
+
+build:
+    environment:
+        node: '8.6.0'
+    tests:
+        override:
+            -
+                command: 'npm run test-scrutinizer'
+                coverage:
+                    file: 'build/coverage/clover.xml'
+                    format: 'clover'

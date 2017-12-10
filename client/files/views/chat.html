@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chat | Me-sida</title>
+    <link rel="stylesheet" href="../less/style.less" />
+</head>
+
+<body>
+    <nav class="navbar">
+        <img class="mungeimg" src="../images/munge.png" />
+        <ul>
+            <li><a href="index.html">Start</a></li>
+            <li><a href="about.html">Om</a></li>
+            <li><a href="report.html">Redovisningar</a></li>
+            <li><a href="chat.html">Chat</a></li>
+            <li><a href="app.html">App</a></li>
+            <li><a href="crud/read.html">Database</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+        <h1>Chat | Me-sida</h1>
+        <form id="form1" class="chatform">
+            <p id="connect_p" class="connect_p">
+                <label>IP:</label>
+                <input id="connect_url" type="text" value="ws://localhost:3000" />
+                <label>Username:</label>
+                <input type="text" name="user" id="user" />
+                <input type="hidden" name="protocol" id="protocol" value="json" />
+                <input id="connect" type="button" value="Connect" />
+            </p>
+
+            <p id="disconnect_p" class="disconnect_p" style={disconnect_style}>
+                <input id="close" type="button" value="Close connection" />
+            </p>
+
+            <p class="chat_log">
+                <div id="output" class="output"></div>
+            </p>
+
+            <p class="send_message">
+                <input id="message" type="text" />
+                <input id="send_message" type="button" value="Send message" />
+            </p>
+
+        </form>
+        <script src="../js/chat.js" charset="utf-8"></script>
+    </div>
+</body>
+
+</html>

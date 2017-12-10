@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Db Update</title>
+    <link rel="stylesheet" href="../../less/style.less">
+</head>
+<body>
+    <nav class="navbar">
+        <img class="mungeimg" src="../../images/munge.png" />
+        <ul>
+            <li><a href="../index.html">Start</a></li>
+            <li><a href="./about.html">Om</a></li>
+            <li><a href="../report.html">Redovisningar</a></li>
+            <li><a href="../chat.html">Chat</a></li>
+            <li><a href="../app.html">App</a></li>
+            <li><a href="read.html">Database</a></li>
+        </ul>
+    </nav>
+    <form action="read.html" id="form2">
+        <label>Name: </label>
+        <input type="text" placeholder="Name" id="name">
+
+        <label>Age: </label>
+        <input type="number" max="100" min="0" placeholder="20" id="age">
+
+        <label>Place of birth: </label>
+        <input type="text" placeholder="Hoor" id="pob">
+
+        <label>Current place: </label>
+        <input type="text" placeholder="Hoor" id="curp">
+
+        <input type="submit" value="Update" id="update">
+    </form>
+
+    <script src="../../js/crud/update.js" charset="utf-8"></script>
+</body>
+</html>
