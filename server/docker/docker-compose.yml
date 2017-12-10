@@ -1,0 +1,22 @@
+version: "3"
+services:
+    node860:
+        build:
+            dockerfile: node860/dockerfile
+        volumes:
+            - ./../:/home/node/app
+    # node860:
+    #     build:
+    #         context: .
+    #         dockerfile: ./node860
+    #     image: node860/dockerfile
+    #     # user: "node"
+    #     # ports:
+    #     #   - "3100:3000"
+    #     # working_dir: /home/node/app
+    #     # environment:
+    #     #   - NODE_ENV=production
+    #     volumes:
+    #       - ./../:/home/node/app
+    #     # command: /bin/bash -c "npm install && make test"
+    #     # command: "make test"
