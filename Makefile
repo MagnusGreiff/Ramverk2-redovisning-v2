@@ -84,6 +84,10 @@ help:
 start:
 	cd server && docker-compose up -d express && cd - && cd client && npm start
 
+#Install dependencies
+.PHONY: install
+	cd server && npm install && cd - && cd client && npm install && cd -
+
 # ------------------------------------------------------------------------
 #
 # Theme
