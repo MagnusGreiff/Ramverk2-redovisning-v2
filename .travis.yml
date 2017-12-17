@@ -9,9 +9,3 @@ sudo: false
 
 git:
     submodules: false
-
-before_script:
-    - npm run install
-
-script:
-    - npm run test
