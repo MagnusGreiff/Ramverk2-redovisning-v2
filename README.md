@@ -1,3 +1,8 @@
+[![Build Status](https://travis-ci.org/MagnusGreiff/Ramverk2-redovisning-v2.svg?branch=master)](https://travis-ci.org/MagnusGreiff/Ramverk2-redovisning-v2)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/MagnusGreiff/Ramverk2-redovisning-v2/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/MagnusGreiff/Ramverk2-redovisning-v2/?branch=master)
+[![Build Status](https://scrutinizer-ci.com/g/MagnusGreiff/Ramverk2-redovisning-v2/badges/build.png?b=master)](https://scrutinizer-ci.com/g/MagnusGreiff/Ramverk2-redovisning-v2/build-status/master)
+[![Maintainability](https://api.codeclimate.com/v1/badges/a793a4f71d74dde35489/maintainability)](https://codeclimate.com/github/MagnusGreiff/Ramverk2-redovisning-v2/maintainability)
+
 # Me-sidan
 
 ## Tekniker
