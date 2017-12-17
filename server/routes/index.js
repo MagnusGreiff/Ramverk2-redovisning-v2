@@ -74,7 +74,7 @@ exports.dbGetAllChat = async (req, res) => {
     } catch (err) {
         console.error(err);
     }
-}
+};
 
 exports.dbInsert = async (req) => {
     let obj = await req.params.ob;
@@ -90,7 +90,7 @@ exports.dbInsertChat = async (req) => {
     console.log(obj);
 
     await db.insertToCollection(obj, "chat");
-}
+};
 
 exports.dbRemove = async (req) => {
     let id = await req.params.id;

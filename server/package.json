@@ -4,9 +4,12 @@
     "private": true,
     "scripts": {
         "start": "node app.js",
-        "test": "mocha 'test/**/*.js'",
+        "test": "make test",
         "test-scrutinizer": "nyc --all --reporter=clover mocha test/**/*.js",
-        "test-nyc": "nyc --reporter=html --reporter=text mocha 'test/**/*.js'"
+        "test-nyc": "nyc --reporter=html --reporter=text mocha 'test/**/*.js'",
+        "test1": "docker-compose build node860-test && docker-compose run node860-test",
+        "test2": "docker-compose build node830-test && docker-compose run node830-test",
+        "test3": "docker-compose build node810-test && docker-compose run node810-test"
     },
     "repository": {
         "type": "git",
