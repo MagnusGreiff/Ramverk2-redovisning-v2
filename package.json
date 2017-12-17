@@ -1,0 +1,7 @@
+{
+    "name": "Ramverk2-Redovisning-v2",
+    "scripts": {
+        "start": "cd server && docker-compose up -d express && cd - && cd client && npm start",
+        "install": "cd server && npm install && cd - && cd client && npm install && cd -"
+    }
+}
