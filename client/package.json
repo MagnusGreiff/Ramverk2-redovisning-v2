@@ -5,7 +5,7 @@
     "main": "startUp.js",
     "scripts": {
         "start": "electron .",
-        "test": "mocha 'test/**/*.js'",
+        "test": "nyc --reporter=html --reporter=text mocha 'test/**/*.js'",
         "test-scrutinizer": "nyc --all --reporter=clover mocha test/**/*.js"
     },
     "repository": "https://github.com/electron/electron-quick-start",
