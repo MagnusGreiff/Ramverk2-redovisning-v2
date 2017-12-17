@@ -1,0 +1,6 @@
+checks:
+    javascript: true
+
+build:
+    environment:
+        node: '8.6.0'
