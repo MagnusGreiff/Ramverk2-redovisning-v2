@@ -1,19 +1,31 @@
-# Ramverk2-redovisning-v2
+# Me-sidan
 
-### Clone
-Run the command: `git clone https://github.com/MagnusGreiff/Ramverk2-redovisning-v2.git` and it will download the source code.
+## Tekniker
+Jag valde att använda mig utav Express som server och sedan Electron som klient/frontend. Jag använder mig utan Mongodb som min databas.
 
-### Installation
-When standing in the root directory run the command `make install` and it will install all the dependencies for the server and client.
+## Starta up me-sidan
 
-### Starting everything
-To start the database, express server and client run the command `make start`.
+Det första man måste göra för att starta me-sidan är att ladda ner koden. Det kan man göra med följande kommand: `git clone https://github.com/MagnusGreiff/Ramverk2-redovisning-v2.git`.
 
-### Docker Testing
-To run the tests in a docker container please use the following commands: `make test1` <- node 8.6.0, `make test2` <- node 8.3.0, `make test3` <- node 8.1.0 in the client/server folder.
+När koden väl är nedladdad måste man installa alla dependencies genom att köra kommandot `npm run install`.
 
-### Run the code via docker
-To run the code via docker please use the following commands: `make node1` will start node 8.6.0, `make node2` will start node 8.3.0 and `make node3` will start node 8.1.0 in the server folder.
+Du har du allt som behövs för att starta upp me-sidan. För att starta den behöver du köra följande kommando: `npm run start`. Med det kommandot startas express servern, databasen och klienten.
 
-### No badges?
-There are currently no badges because I had to redo the me-page and I did not have time to fix them.
+## Portar och dsn
+Följande alternativ för portar och dsn finns:
+* 3000 (standarn port)
+* DBWEBB_PORT (alternativ till standard porten)
+* mongodb://localhost:27017/redovisa (standard dsn)
+* DBWEBB_DSN (alternativ till standard dsn)
+
+Man kan konfigurera portarna genom att lägga till följande rader i sin .bash_profil: `export DBWEBB_PORT=1337` och `export DBWEBB_DSN=mongodb://localhost:27017/something`.
+
+## Tester
+### Klient:
+Här går det bara att köra testerna utan docker. Det är för att man inte kan köra en electron app i en docker container.
+Kommandot för attt köra testerna är `npm run test`.
+### Server:
+Här finns möjligheten att köra testerna både i en docker container och utan.
+För att köra testera i en docker container använder du följande kommando: `npm run test1`, `npm run test2` och `npm run test3`.
+För att köra testerna utan en docker container så finns följande kommando: `npm run test`.
+För att se kodtäckning kör kommandot `npm run test-nyc`.
