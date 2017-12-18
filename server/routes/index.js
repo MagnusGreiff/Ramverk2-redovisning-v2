@@ -65,22 +65,17 @@ exports.posts = (req, res) => {
 
     try {
         (async () => {
-            let jsonInfo;
             let key = token.key;
-            let url = link + postId + '?site=stackoverflow&' + filter + '&key=' + key;
+            let type = token.type;
+            let url;
 
-            await fetch(url)
-                .then((response) => response.json())
-                .then((responseJson) => {
-                    jsonInfo = responseJson;
-                    console.log(jsonInfo);
-                    res.json({
-                        json: jsonInfo
-                    });
-                })
-                .catch((error) => {
-                    console.error(error);
-                });
+            if (type == "public") {
+                url = link + postId + '?site=stackoverflow&' + filter;
+            } else if (type == "private") {
+                url = link + postId + '?site=stackoverflow&' + filter + '&key=' + key;
+            }
+
+            makeRequest(url, res);
         })();
     } catch (e) {
         console.log(e);
