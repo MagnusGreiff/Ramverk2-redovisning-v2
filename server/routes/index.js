@@ -2,26 +2,59 @@
 
 const db = require('../src/database');
 const fetch = require('node-fetch');
-const token = require("../config/token");
+
+let checkApiToken = (validPath, unvalidPath) => {
+    let token;
+
+    try {
+        token = require(validPath);
+        console.info("\x1b[32m",
+            "You are using token.json and can now do api request if your key is valid.");
+        console.info("\x1b[0m");
+    } catch (e) {
+        console.warn("\x1b[33m",
+            "You are using example-token.json. You need to add your own key to token.json.");
+        console.warn("The server will start but you can't do any api requests.");
+        console.info("\x1b[0m");
+        token = require(unvalidPath);
+    }
+    return token;
+};
+
+const token = checkApiToken("../config/token", "../config/example-token.json");
+
+
+let makeRequest = async (url, res) => {
+    await fetch(url)
+        .then((response) => response.json())
+        .then((responseJson) => {
+            let jsonInfo = responseJson;
+            res.json({
+                json: jsonInfo
+            });
+        })
+        .catch((error) => {
+            console.error(error);
+        });
+};
+
 
 exports.index = (req, res) => {
     (async () => {
         let jsonInfo;
         let key = token.key;
-        let url = 'https://api.stackexchange.com/2.2/badges/name?site=stackoverflow&key=' + key;
+        let link = 'https://api.stackexchange.com/2.2/badges/name';
 
-        await fetch(url)
-            .then((response) => response.json())
-            .then((responseJson) => {
-                jsonInfo = responseJson;
-                console.log(jsonInfo);
-                res.json({
-                    json: jsonInfo
-                });
-            })
-            .catch((error) => {
-                console.error(error);
-            });
+        let type = token.type;
+        let url;
+
+        if (type == "public") {
+            url = link + '?site=stackoverflow';
+        } else if (type == "private") {
+            url = link + '?site=stackoverflow' + '&key=' + key;
+        }
+
+        makeRequest(url, res);
     })();
 };
 
