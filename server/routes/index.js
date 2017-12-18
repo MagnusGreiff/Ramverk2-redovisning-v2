@@ -14,7 +14,7 @@ let checkApiToken = (validPath, unvalidPath) => {
     } catch (e) {
         console.warn("\x1b[33m",
             "You are using example-token.json. You need to add your own key to token.json.");
-        console.warn("The server will start but you can't do any api requests.");
+        console.warn("The server will start and you can only do x amounts of requests.");
         console.info("\x1b[0m");
         token = require(unvalidPath);
     }
